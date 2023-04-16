@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SavepointTable"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="SAVEPOINT_TABLE"
+  AliasName="SavepointTable"
+  BindingStyle="OracleName"
+  RowClass="model.SavepointTableImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="IdSavepoint"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="ID_SAVEPOINT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SAVEPOINT_TABLE"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="NameSavepoint"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="NAME_SAVEPOINT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SAVEPOINT_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="SavepointtablePrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SAVEPOINTTABLE_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.SavepointTable.IdSavepoint"/>
+    </AttrArray>
+  </Key>
+</Entity>
